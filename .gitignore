@@ -3,8 +3,10 @@
 *.db
 *.db-journal
 *.sass-cache
+*.orig
 config/config.ini
 config/credentials.json
 static/dist/
 node_modules/
 venv/
+startserver.sh

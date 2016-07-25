@@ -1,15 +1,36 @@
+<<<<<<< HEAD
 ### UNTESTED WITH MOD FOR MYSQL AND MULTI-SEARCHER SINGLE PORTAL
 
 # PokemonGo Map ![Python 2.7](https://img.shields.io/badge/python-2.7-blue.svg)[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/PoGoMapDev)
 
+=======
+# PokemonGo Map![Python 2.7](https://img.shields.io/badge/python-2.7-blue.svg)
+>>>>>>> 6c01f06343220dab6e0865e3a46b8959e897e4a6
 
-Live visualization of all the pokemon (with option to show gyms and pokestops) in your area. This is a proof of concept that we can load all the pokemon visible nearby given a location. Currently runs on a Flask server displaying a Google Maps with markers on it.
 
-[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://github.com/AHAAAAAAA/PokemonGo-Map/wiki/Heroku-Deployment)
+Live visualization of all the pokemon (with option to show gyms and pokestops) in your area. This is a proof of concept that we can load all the pokemon visible nearby given a location. Currently runs on a Flask server displaying Google Maps with markers on it.
 
+<<<<<<< HEAD
 
 #[Official Twitter] (https://twitter.com/PoGoMDev) Please give us a follow or contact us here.
 #[Official Website] (https://jz6.github.io/PoGoMap/)#
+=======
+Features: 
+
+* Shows Pokemon, Pokestops, and gyms with a clean GUI.
+* Notifications 
+* Lure information
+* Multithreaded mode
+* Filters
+* Independent worker threads (many can be used simulatenously to quickly generate a livemap of a huge geographical area)
+* Localization (en, fr, pt_br, de, ru, zh_cn, zh_hk)
+* DB storage (sqlite or mysql) of all found pokemon
+* Incredibly fast, efficient searching algorithm (compared to everything else available)
+
+[![Deploy](https://raw.githubusercontent.com/sych74/PokemonGo-Map-in-Cloud/master/images/deploy-to-jelastic.png)](https://jelastic.com/install-application/?manifest=https://raw.githubusercontent.com/sych74/PokemonGo-Map-in-Cloud/master/manifest.jps) [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://github.com/AHAAAAAAA/PokemonGo-Map/wiki/Heroku-Deployment) 
+
+#[Twitter] (https://twitter.com/PoGoMDev), [Website] (https://jz6.github.io/PoGoMap/)#
+>>>>>>> 6c01f06343220dab6e0865e3a46b8959e897e4a6
 
 ![Map](https://i.imgur.com/ZjB9lo0.jpg)
 
@@ -37,5 +58,8 @@ Using this software is against the ToS of the game. You can get banned, use this
 Please submit all pull requests to [develop](https://github.com/AHAAAAAAA/PokemonGo-Map/tree/develop) branch.
 
 Building off [tejado's python pgoapi](https://github.com/tejado/pgoapi), [Mila432](https://github.com/Mila432/Pokemon_Go_API)'s API, [leegao's additions](https://github.com/leegao/pokemongo-api-demo/tree/simulation) and [Flask-GoogleMaps](https://github.com/rochacbruno/Flask-GoogleMaps). Current version relies primarily on the pgoapi and Google Maps JS API.
+<<<<<<< HEAD
 
 Bitcoin donations appreciated! **18ABe5rhZgLR6zdH27hDWp8DdTkWKJoKwo**
+=======
+>>>>>>> 6c01f06343220dab6e0865e3a46b8959e897e4a6

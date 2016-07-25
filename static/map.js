@@ -356,7 +356,6 @@ function scannedLabel(last_modified) {
     return contentstring;
 };
 
-<<<<<<< HEAD
 // Dicts
 map_pokemons = {} // Pokemon
 map_gyms = {} // Gyms
@@ -364,7 +363,6 @@ map_pokestops = {} // Pokestops
 map_scanned = {} // Pokestops
 var gym_types = ["Uncontested", "Mystic", "Valor", "Instinct"];
 var audio = new Audio('https://github.com/AHAAAAAAA/PokemonGo-Map/raw/develop/static/sounds/ding.mp3');
-=======
 
 function getGoogleSprite(index, sprite, display_height) {
     display_height = Math.max(display_height, 3);
@@ -384,7 +382,6 @@ function getGoogleSprite(index, sprite, display_height) {
         anchor: scaled_icon_center_offset
     };
 }
->>>>>>> 6c01f06343220dab6e0865e3a46b8959e897e4a6
 
 function setupPokemonMarker(item) {
 
@@ -411,19 +408,10 @@ function setupPokemonMarker(item) {
     });
 
     if (notifiedPokemon.indexOf(item.pokemon_id) > -1) {
-<<<<<<< HEAD
-        if(localStorage.playSound === 'true'){
-          audio.play();
-        }
         sendNotification('A wild ' + item.pokemon_name + ' appeared!', 'Click to load map', 'static/icons/' + item.pokemon_id + '.png')
-=======
         if (localStorage.playSound === 'true') {
           audio.play();
         }
-
-        sendNotification('A wild ' + item.pokemon_name + ' appeared!', 'Click to load map', 'static/icons/' + item.pokemon_id + '.png', item.latitude, item.longitude);
-        marker.setAnimation(google.maps.Animation.BOUNCE);
->>>>>>> 6c01f06343220dab6e0865e3a46b8959e897e4a6
     }
 
     addListeners(marker);
@@ -568,14 +556,6 @@ function clearStaleMarkers() {
     });
 };
 
-<<<<<<< HEAD
-function updateMap() {
-
-    localStorage.showPokemon = localStorage.showPokemon || true;
-    localStorage.showGyms = localStorage.showGyms || true;
-    localStorage.showPokestops = localStorage.showPokestops || false;
-    localStorage.showScanned = localStorage.showScanned || false;
-=======
 function clearOutOfBoundsMarkers(markers) {
   $.each(markers, function(key, value) {
       var marker = markers[key].marker;
@@ -592,7 +572,6 @@ function clearOutOfBoundsMarkers(markers) {
       }
   });
 }
->>>>>>> 6c01f06343220dab6e0865e3a46b8959e897e4a6
 
 function loadRawData() {
     var loadPokemon = localStorage.showPokemon || true;
@@ -723,14 +702,7 @@ function processGyms(i, item) {
         item.marker = setupGymMarker(item);
         map_data.gyms[item.gym_id] = item;
     }
-
-<<<<<<< HEAD
-$('#sound-switch').change(function() {
-    localStorage["playSound"] = this.checked;
-});
-=======
 }
->>>>>>> 6c01f06343220dab6e0865e3a46b8959e897e4a6
 
 
 function processScanned(i, item) {

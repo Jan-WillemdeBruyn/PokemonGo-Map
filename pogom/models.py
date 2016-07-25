@@ -17,7 +17,7 @@ log = logging.getLogger(__name__)
 log.info(args.dbhost)
 log.info(args.db)
 log.info(args.dbuser)
-db = MySQLDatabase(args.db,host=args.dbhost,username=args.dbuser,password=args.dbpassword)
+db = MySQLDatabase(args.db,host=args.dbhost,user=args.dbuser,password=args.dbpassword)
 
 
 class BaseModel(Model):

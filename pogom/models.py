@@ -14,10 +14,10 @@ from .customLog import printPokemon
 
 args = get_args()
 log = logging.getLogger(__name__)
-log.info(args.db-host)
+log.info(args.dbhost)
 log.info(args.db)
-log.info(args.db-username)
-db = MySQLDatabase(args.db,host=args.db-host,username=args.db-username,password=args-password)
+log.info(args.dbusername)
+db = MySQLDatabase(args.db,host=args.dbhost,username=args.dbusername,password=argspassword)
 
 
 class BaseModel(Model):

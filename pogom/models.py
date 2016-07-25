@@ -13,7 +13,7 @@ from .transform import transform_from_wgs_to_gcj
 from .customLog import printPokemon
 
 args = get_args()
-db = MySQLDatabase(args.db)
+db = MySQLDatabase(args.db,host=args.db-host,username=args.db-username,password=args-password)
 log = logging.getLogger(__name__)
 
 

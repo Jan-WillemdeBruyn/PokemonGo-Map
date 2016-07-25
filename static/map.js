@@ -68,10 +68,10 @@ function initMap() {
 
     map = new google.maps.Map(document.getElementById('map'), {
         center: {
-            lat: center_lat,
-            lng: center_lng
+            lat: 52.2093655,
+            lng: 4.1584496
         },
-        zoom: 16,
+        zoom: 8,
         fullscreenControl: true,
         streetViewControl: false,
 		mapTypeControl: true,

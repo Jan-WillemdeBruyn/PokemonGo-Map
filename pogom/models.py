@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import logging
-from peewee import Model, SqliteDatabase, InsertQuery, IntegerField,\
+from peewee import Model, MySQLDatabase, InsertQuery, IntegerField,\
                    CharField, FloatField, BooleanField, DateTimeField
 from datetime import datetime
 from datetime import timedelta
@@ -13,7 +13,7 @@ from .transform import transform_from_wgs_to_gcj
 from .customLog import printPokemon
 
 args = get_args()
-db = SqliteDatabase(args.db)
+db = MySQLDatabase(args.db)
 log = logging.getLogger(__name__)
 
 

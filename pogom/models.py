@@ -11,33 +11,33 @@ from datetime import timedelta
 from base64 import b64encode
 
 from . import config
-from .utils import get_pokemon_name, load_credentials, get_args
+from .utils import get_pokemon_name, get_args
 from .transform import transform_from_wgs_to_gcj
 from .customLog import printPokemon
 
-args = get_args()
+logging.basicConfig(level=logging.INFO, format='%(asctime)s [%(module)11s] [%(levelname)7s] %(message)s')
+
 log = logging.getLogger(__name__)
-log.info(args.dbhost)
-log.info(args.db)
-log.info(args.dbuser)
-db = MySQLDatabase(args.db,host=args.dbhost,user=args.dbuser,password=args.dbpassword)
+
+args = get_args()
+db = None
 
 def init_database():
     global db
     if db is not None:
         return db
 
-#    print args.db_type
-#    if args.db_type == 'mysql':
-#        db = MySQLDatabase(
-#            args.db_name,
-#            user=args.db_user,
-#            password=args.db_pass,
-#            host=args.db_host)
-#        log.info('Connecting to MySQL database on {}.'.format(args.db_host))
-#    else:
-#        db = SqliteDatabase(args.db)
-#        log.info('Connecting to local SQLLite database.')
+    print args.db_type
+    if args.db_type == 'mysql':
+        db = MySQLDatabase(
+            args.db_name,
+            user=args.db_user,
+            password=args.db_pass,
+            host=args.db_host)
+        log.info('Connecting to MySQL database on {}.'.format(args.db_host))
+    else:
+        db = SqliteDatabase(args.db)
+        log.info('Connecting to local SQLLite database.')
 
     return db
 

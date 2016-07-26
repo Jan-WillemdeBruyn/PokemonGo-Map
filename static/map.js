@@ -893,7 +893,7 @@ function changeLocation(lat, lng) {
 }
 
 function changeSearchLocation(lat, lng) {
-    return $.post("next_loc?lat=" + lat + "&lon=" + lng, {});
+    //return $.post("next_loc?lat=" + lat + "&lon=" + lng, {});
 }
 
 function centerMap(lat, lng, zoom) {

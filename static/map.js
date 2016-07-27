@@ -865,8 +865,8 @@ function processScanned(i, item) {
 
 function updateMap() {
 
-  window.clearTimeout(timeout);
-timeout = window.setTimeout(function () {
+  window.clearTimeout(timeout2);
+timeout2 = window.setTimeout(function () {
   loadRawData().done(function (result) {
         $.each(result.pokemons, processPokemons);
         $.each(result.pokestops, processPokestops);
@@ -882,7 +882,6 @@ timeout = window.setTimeout(function () {
     });
 
     }, 500);
-});
 };
 
 
